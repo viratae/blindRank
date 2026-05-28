@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    transition: all .5s;
+}
+body {
+    background-color: rgb(244, 243, 239);
+}
+#inputPage,
+#battlePage, #resultsPage {
+    display: flex;
+    box-sizing: border-box;
+    height: 100vh;
+    flex-direction: column;
+}
+#resultsPage {
+    display: flex;
+    box-sizing: border-box;
+    height: fit-content;
+    flex-direction: column;
+    padding: 5vw;
+    align-items: center;
+}
+#inputPage {
+    padding: clamp(10px, 2vw, 200px);
+    justify-content: space-around;
+}
+.header {
+    padding: clamp(20px, 5vw, 200px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+h1 {
+    letter-spacing: 7px;
+    text-align: center;
+    font-size: clamp(24px, 4.5em, 100px);
+    transform: scale(1, 1.5);
+    font-family:'Times New Roman', Times, serif;
+}
+h3 {
+    text-align: center;
+    font-size: clamp(18px, 1.8em, 60px);
+    font-family:monospace;
+    font-weight: 100;
+}
+h4 {
+    text-align: center;
+    font-size: clamp(15px, 1.4rem, 50px);
+    font-family: monospace;
+}
+h5 {
+    text-align: center;
+    font-size: clamp(14px, 1rem, 40px);
+    font-family: monospace;
+    font-weight: 0;
+}
+#inputBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+#inputInstructions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+#rankForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+textarea {
+    border-radius: 15px;
+    padding: 15px;
+    font-style: monospace;
+    font-size: clamp(12px, 1rem, 18px);
+    width: clamp(100px, 80vw, 1000px);
+    height: fit-content;
+}
+input {
+    border: 1px solid grey;
+    border-radius: 15px;
+    padding: 10px;
+    font-style: monospace;
+    font-size: clamp(12px, 1rem, 18px);
+    width: 30px;
+    text-align: center;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#rankTitleInput {
+    margin-bottom: 10px;
+}
+#rankInput {
+    height: clamp(75px, 10vh, 600px);
+}
+textarea:focus,
+input:focus {
+    outline: none;
+}
+#inputPage button {
+    margin-top: 15px;
+    width: fit-content;
+    padding: 10px 15px;
+    border: 3px solid black;
+    border-radius: 20px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.522);
+}
+#inputPage button:hover {
+    transform: scale(1.05);
+    background-color: white;
+}
+#footer {
+    font-family: 'Times New Roman', Times, serif;
+}
+#footer a {
+    text-decoration: none;
+    color: rgb(85, 86, 153);
+}
+#battlePage h1, #resultsPage h1 {
+    transform: scale(1, 1.3);
+}
+#battlePage h3 {
+    font-size: clamp(16px, 1.3em, 40px);
+}
+#matchContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#matchContainer button {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: clamp(16px, 2rem, 40px);
+    width: clamp(100px, 36vw, 350px);
+    aspect-ratio: 1 / 1;
+    background-color: rgba(255, 255, 255, 0.522);
+    border-radius: 30px;
+}
+#matchContainer button:hover {
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.05);
+}
+#resultsPage h1 {
+    margin-bottom: clamp(10px, 6vh, 200px)
+}
+#table, tr, th, td {
+    width: fit-content;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+#table {
+    min-width: 40vw;
+    margin-bottom: 20px;
+}
+th, td {
+    padding: 5px;
+    font-family: monospace;
+    font-size: 1rem;
+}
+.italics {
+    font-style: italic;
+}
+.hidden {
+    display: none !important;
+}
+@media screen and (max-width: 850px) {
+    .header {
+        padding: clamp(20px, 3vw, 200px);
+    }
+    h1 {
+        font-size: clamp(24px, 2.5em, 100px);
+    }
+}
+@media screen and (max-width: 600px) {
+    body {
+    }
+    h1 {
+        font-size: clamp(12px, 1.7rem, 100px);
+    }
+    h3 {
+        font-size: clamp(12px, 1.2rem, 100px);
+    }
+    h4 {
+        font-size: clamp(12px, 1rem, 100px);
+    }
+    #battlePage h1 {
+        font-size: 1.8rem;
+    }
+}
