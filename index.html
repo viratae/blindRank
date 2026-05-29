@@ -19,24 +19,20 @@
                 <h4>First create a pool to rank from by entering items separated by a comma</h4>
                 <textarea placeholder="Billie Jean, Thriller, Beat It, Smooth Criminal, Man In the Mirror, Bad..." name="rankInput" id="rankInput"></textarea>
                 <h4>Next enter how many items you want to blind rank (cannot exceed pool size)</h4>
-                <input type="number" id="numberInput">
+                <input type="number" id="numberInput" value="5">
                 <button id="submitButton" type="submit">Rank These Items</button>
             </form>
             <div id="footer">© 2026 -&nbsp;<a href="https://github.com/viratae">viratae</a></div>
         </div>
     </div>
-    <div id="battlePage" class="hidden">
+    <div id="rankPage" class="">
         <div class="header">
-            <h1>MATCHUP #<span id="matchNumber">1</span></h1>
-            <h3>Click the option you like the best!</h3>
+            <h1>BLIND RANK #<span id="matchNumber">1</span></h1>
+            <h3>Choose where to rank:</h3>
+            <h2><span id="blindItem">Beat It</span></h2>
         </div>
-        <div id="matchContainer">
-            <button class="match" id="leftButton">
-                The Great Divide
-            </button>
-            <button class="match" id="rightButton">
-                Porch Light
-            </button>
+        <div id="rankOptions">
+           
         </div>
     </div>
     <div id="resultsPage" class="hidden">
