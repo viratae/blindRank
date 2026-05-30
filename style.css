@@ -159,6 +159,17 @@ button:disabled:hover {
     background-color: transparent;
     transform: scale(1);
 }
+#resultsPage h1 {
+    margin-bottom: clamp(10px, 6vh, 200px)
+}
+#resultsPage {
+    display: flex;
+    box-sizing: border-box;
+    height: fit-content;
+    flex-direction: column;
+    padding: 5vw;
+    align-items: center;
+}
 #table, tr, th, td {
     width: fit-content;
     border: 2px solid black;
