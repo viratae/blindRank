@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blind Rank</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.png">
 </head>
 <body>
     <div id="inputPage" class="">
@@ -14,17 +15,23 @@
             <h3>Your <span class="italics">way</span></h3>
         </div>
         <div id="inputBox">
-            <form id="rankForm">
-                <h4>First create a pool to rank from by entering items separated by a comma</h4>
-                <textarea placeholder="Billie Jean, Thriller, Beat It, Smooth Criminal, Man In the Mirror, Bad..." name="rankInput" id="rankInput"></textarea>
-                <h4>Next enter how many items you want to blind rank (cannot exceed pool size)</h4>
-                <input type="number" id="numberInput" value="5">
+            <form id="rankForm" novalidate>
+                <h4>First create a list to rank from by entering items separated by a comma</h4>
+                <div class="errorBox">
+                    <textarea placeholder="Billie Jean, Thriller, Beat It, Smooth Criminal, Man In the Mirror, Bad..." name="rankInput" id="rankInput" required></textarea>
+                    <span class ="error" id="rankMessage">test</span>
+                </div>
+                <h4>Next enter how many items you want to blind rank (cannot exceed list size)</h4>
+                <div class="errorBox">
+                    <input type="number" min="1" max="100" id="numberInput" value="5">
+                    <span class ="error" id="numberMessage"></span>
+                </div>
                 <button id="submitButton" type="submit">Rank These Items</button>
             </form>
             <div id="footer">© 2026 -&nbsp;<a href="https://github.com/viratae">viratae</a></div>
         </div>
     </div>
-    <div id="rankPage" class="">
+    <div id="rankPage" class="hidden">
         <div class="header">
             <h1>BLIND RANK #<span id="matchNumber">1</span></h1>
             <h3>Choose where to rank:</h3>
